@@ -17,9 +17,10 @@ public class stepDefination {
     	System.out.println("On Landing Page");
     }
 
-    @When("^User login into application with username and password$")
-    public void user_login_into_application_with_username_and_password() throws Throwable {
-        System.out.println("Enterig Username & Password");
+    @When("^User login into application with username \"([^\"]*)\" and password \"([^\"]*)\"$")
+    public void user_login_into_application_with_username_something_and_password_something(String strArg1, String strArg2) throws Throwable {
+        System.out.println(strArg1);
+        System.out.println(strArg2);
     }
 
     @Then("^Home page is populated$")
@@ -27,9 +28,9 @@ public class stepDefination {
     	System.out.println("Populate Homepage");
     }
 
-    @And("^Cards are displayed$")
-    public void cards_are_displayed() throws Throwable {
-        System.out.println("Display Cards");
+    @And("^Cards are displayed if \"([^\"]*)\"$")
+    public void cards_are_displayed_if_something(String strArg1) throws Throwable {
+        System.out.println(strArg1);
     }
 
 }
